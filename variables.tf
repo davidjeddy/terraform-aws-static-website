@@ -63,6 +63,12 @@ variable "tags" {
 
 ## DNS
 
+variable "enabled_dnssec" {
+  default = true
+  description = "(optional) DNSSEC feature toggle. Disable when using a delegated domain."
+  type = bool
+}
+
 variable "domain_name" {
   description = "(required) Domain of the project"
   type        = string
